@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  FoodPin
 //
-//  Created by guan on 2019/1/7.
-//  Copyright © 2019 guan. All rights reserved.
+//  Created by Joe on 2019/1/7.
+//  Copyright © 2019 Joe. All rights reserved.
 //
 
 import UIKit

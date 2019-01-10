@@ -2,8 +2,8 @@
 //  MapViewController.swift
 //  FoodPin
 //
-//  Created by guan on 2019/1/10.
-//  Copyright © 2019 guan. All rights reserved.
+//  Created by Joe on 2019/1/10.
+//  Copyright © 2019 Joe. All rights reserved.
 //
 
 import Foundation
