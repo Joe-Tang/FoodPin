@@ -1,2 +1,2 @@
 # FoodPin
-sample for ios
+a sample for ios
