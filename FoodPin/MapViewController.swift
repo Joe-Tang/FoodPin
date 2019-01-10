@@ -17,9 +17,7 @@ class MapViewController : UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        mapView.delegate = self
-        
+
         let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(restaurant.location, completionHandler: {
             placemarks, error in
@@ -40,6 +38,12 @@ class MapViewController : UIViewController, MKMapViewDelegate {
                 }
             }
         })
+        
+        mapView.delegate = self
+
+        mapView.showsScale = true
+        mapView.showsCompass = true
+        mapView.showsTraffic = true
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
