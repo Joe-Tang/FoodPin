@@ -16,13 +16,13 @@ class ReviewViewController : UIViewController {
     @IBOutlet var topImageView: UIImageView!
     @IBOutlet var closeButton: UIButton!
 
-    var restaurant: Restaurant!
+    var restaurant: RestaurantMO!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let restaurant = self.restaurant {
-            let image = UIImage(named: restaurant.image)
+            let image = UIImage(data: restaurant.image!)
             backgroundImageView.image = image
             topImageView.image = image
         }

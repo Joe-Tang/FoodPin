@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class AddRestaurantController : UITableViewController,
         UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -16,9 +17,12 @@ class AddRestaurantController : UITableViewController,
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var typeTextField: UITextField!
     @IBOutlet var locationTextField: UITextField!
+    @IBOutlet var phoneTextField: UITextField!
     @IBOutlet var yesButton: UIButton!
     @IBOutlet var noButton: UIButton!
     var isVisited = true
+    
+    var restaurant: RestaurantMO!
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
@@ -60,13 +64,30 @@ class AddRestaurantController : UITableViewController,
     }
 
     @IBAction func save(_ sender: Any) {
-        if (nameTextField.text?.isEmpty)! || (typeTextField.text?.isEmpty)! || (locationTextField.text?.isEmpty)! {
+        if (nameTextField.text?.isEmpty)! || (typeTextField.text?.isEmpty)!
+            || (locationTextField.text?.isEmpty)! || (phoneTextField.text?.isEmpty)! {
             let alertController = UIAlertController(title: "oops", message: "We can't proceed because one of fields is blank...", preferredStyle: .alert)
             let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(alertAction)
             present(alertController, animated: true, completion: nil)
         } else {
-            print(nameTextField.text ?? "nil", typeTextField.text ?? "nil", locationTextField.text ?? "nil")
+            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+                restaurant = RestaurantMO(context: appDelegate.persistentContainer.viewContext)
+                restaurant.name = nameTextField.text
+                restaurant.type = typeTextField.text
+                restaurant.location = locationTextField.text
+                restaurant.isVisited = isVisited
+                restaurant.phone = phoneTextField.text
+                
+                if let image = photoImageView.image {
+                    if let imageData = image.pngData() {
+                        restaurant.image = NSData(data: imageData) as Data
+                    }
+                }
+                print("Savaing data to context ...")
+                appDelegate.saveContext()
+            }
+            
             dismiss(animated: true, completion: nil)
         }
     }

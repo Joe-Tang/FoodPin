@@ -332,42 +332,71 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAVE YOU BEEN HERE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZf-NJ-5Gg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHONE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZf-NJ-5Gg">
+                                                    <rect key="frame" x="16" y="11" width="57.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Restaurant Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gLZ-rA-taa">
+                                                    <rect key="frame" x="16" y="40" width="119" height="17"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gLZ-rA-taa" firstAttribute="top" secondItem="uZf-NJ-5Gg" secondAttribute="bottom" constant="8" symbolic="YES" id="NFv-Kw-WBH"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uZf-NJ-5Gg" secondAttribute="trailing" constant="20" symbolic="YES" id="ddW-u6-7uJ"/>
+                                                <constraint firstItem="uZf-NJ-5Gg" firstAttribute="top" secondItem="B03-ra-vFH" secondAttribute="topMargin" id="pQF-2u-19e"/>
+                                                <constraint firstItem="uZf-NJ-5Gg" firstAttribute="leading" secondItem="B03-ra-vFH" secondAttribute="leadingMargin" id="vpp-px-L0g"/>
+                                                <constraint firstItem="uZf-NJ-5Gg" firstAttribute="leading" secondItem="gLZ-rA-taa" secondAttribute="leading" id="wQX-zK-34e"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="72" id="Mlb-1Y-sYO">
+                                        <rect key="frame" x="0.0" y="538" width="375" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mlb-1Y-sYO" id="ScY-QT-vDy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAVE YOU BEEN HERE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMW-G9-8Dc">
                                                     <rect key="frame" x="16" y="11" width="177" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8s-Uv-SR8">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYD-Jj-x3J">
                                                     <rect key="frame" x="16" y="40" width="30" height="30"/>
                                                     <color key="backgroundColor" red="1" green="0.078462497650000004" blue="0.13057920319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="YES">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="toggleBeenHereButton:" destination="sUN-Uq-gTb" eventType="primaryActionTriggered" id="1dH-jl-KgN"/>
+                                                        <action selector="toggleBeenHereButton:" destination="sUN-Uq-gTb" eventType="touchDown" id="k0E-hL-sRE"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrA-zj-C8h">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZv-za-ZlP">
                                                     <rect key="frame" x="62" y="41" width="30" height="30"/>
                                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="NO">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="toggleBeenHereButton:" destination="sUN-Uq-gTb" eventType="primaryActionTriggered" id="FWZ-Kd-xXa"/>
+                                                        <action selector="toggleBeenHereButton:" destination="sUN-Uq-gTb" eventType="touchDown" id="6K3-25-zMM"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="A8s-Uv-SR8" firstAttribute="leading" secondItem="B03-ra-vFH" secondAttribute="leadingMargin" id="3pT-FD-WIM"/>
-                                                <constraint firstItem="XrA-zj-C8h" firstAttribute="leading" secondItem="A8s-Uv-SR8" secondAttribute="trailing" constant="16" id="GGy-rJ-Xwc"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="A8s-Uv-SR8" secondAttribute="bottom" constant="-9" id="J0o-TQ-jHf"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XrA-zj-C8h" secondAttribute="trailing" constant="20" symbolic="YES" id="P9T-nH-tYK"/>
-                                                <constraint firstItem="A8s-Uv-SR8" firstAttribute="leading" secondItem="uZf-NJ-5Gg" secondAttribute="leading" id="SQS-z3-NBr"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uZf-NJ-5Gg" secondAttribute="trailing" constant="20" symbolic="YES" id="ddW-u6-7uJ"/>
-                                                <constraint firstItem="A8s-Uv-SR8" firstAttribute="top" secondItem="uZf-NJ-5Gg" secondAttribute="bottom" constant="8" symbolic="YES" id="eI1-9J-dHL"/>
-                                                <constraint firstItem="XrA-zj-C8h" firstAttribute="top" secondItem="uZf-NJ-5Gg" secondAttribute="bottom" constant="9" id="qqq-0K-3HG"/>
+                                                <constraint firstItem="KYD-Jj-x3J" firstAttribute="leading" secondItem="fMW-G9-8Dc" secondAttribute="leading" id="0DM-Ts-bax"/>
+                                                <constraint firstItem="DZv-za-ZlP" firstAttribute="top" secondItem="fMW-G9-8Dc" secondAttribute="bottom" constant="9" id="51o-fT-e2f"/>
+                                                <constraint firstItem="KYD-Jj-x3J" firstAttribute="leading" secondItem="ScY-QT-vDy" secondAttribute="leadingMargin" id="5o3-sF-9KW"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DZv-za-ZlP" secondAttribute="trailing" constant="20" symbolic="YES" id="6Xb-4e-5Zd"/>
+                                                <constraint firstItem="KYD-Jj-x3J" firstAttribute="top" secondItem="fMW-G9-8Dc" secondAttribute="bottom" constant="8" symbolic="YES" id="EVM-lZ-boe"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="KYD-Jj-x3J" secondAttribute="bottom" constant="-9" id="GWq-5H-Y47"/>
+                                                <constraint firstItem="DZv-za-ZlP" firstAttribute="leading" secondItem="KYD-Jj-x3J" secondAttribute="trailing" constant="16" id="Ici-fF-B9q"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fMW-G9-8Dc" secondAttribute="trailing" constant="20" symbolic="YES" id="QD3-2A-P1B"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -396,10 +425,11 @@
                     <connections>
                         <outlet property="locationTextField" destination="DJG-n9-cxo" id="pwh-BW-iQ9"/>
                         <outlet property="nameTextField" destination="0yh-Ii-zfU" id="wQ1-uz-mNV"/>
-                        <outlet property="noButton" destination="XrA-zj-C8h" id="V6E-wC-zVC"/>
+                        <outlet property="noButton" destination="DZv-za-ZlP" id="HXe-bm-MSd"/>
+                        <outlet property="phoneTextField" destination="gLZ-rA-taa" id="2sr-T2-3ML"/>
                         <outlet property="photoImageView" destination="Pi4-k3-FN3" id="rbD-fF-2AF"/>
                         <outlet property="typeTextField" destination="jDC-hU-KJ8" id="GVa-q0-rqs"/>
-                        <outlet property="yesButton" destination="A8s-Uv-SR8" id="vmP-ma-4hn"/>
+                        <outlet property="yesButton" destination="KYD-Jj-x3J" id="EvG-Bt-ehJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWV-uY-RJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
