@@ -56,6 +56,14 @@ class RestaurantTableViewController : UITableViewController, NSFetchedResultsCon
         super.viewWillAppear(animated)
         navigationController?.hidesBarsOnSwipe = true
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let pageViewController = storyboard?.instantiateViewController(withIdentifier:
+            "WalkthroughController") as? WalkthroughPageViewController {
+            present(pageViewController, animated: true, completion: nil)
+        }
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

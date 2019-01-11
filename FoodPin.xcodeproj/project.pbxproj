@@ -21,6 +21,8 @@
 		0242B89D21E723CB002248AC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0242B89C21E723CB002248AC /* MapKit.framework */; };
 		0242B89F21E73A0E002248AC /* AddRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242B89E21E73A0E002248AC /* AddRestaurantController.swift */; };
 		0242B8A221E82C77002248AC /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0242B8A021E82C77002248AC /* FoodPin.xcdatamodeld */; };
+		0242B8A421E8780E002248AC /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242B8A321E8780E002248AC /* WalkthroughContentViewController.swift */; };
+		0242B8A621E87C77002248AC /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242B8A521E87C77002248AC /* WalkthroughPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		0242B89C21E723CB002248AC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0242B89E21E73A0E002248AC /* AddRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRestaurantController.swift; sourceTree = "<group>"; };
 		0242B8A121E82C77002248AC /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
+		0242B8A321E8780E002248AC /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		0242B8A521E87C77002248AC /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 				0240087121E5CEE500A4EFF6 /* ReviewViewController.swift */,
 				0242B89921E6F243002248AC /* MapViewController.swift */,
 				0242B89E21E73A0E002248AC /* AddRestaurantController.swift */,
+				0242B8A321E8780E002248AC /* WalkthroughContentViewController.swift */,
+				0242B8A521E87C77002248AC /* WalkthroughPageViewController.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -181,6 +187,8 @@
 				023D2A3321E33BF400ED1761 /* RestaurantTableViewController.swift in Sources */,
 				0240087221E5CEE500A4EFF6 /* ReviewViewController.swift in Sources */,
 				023D2A3521E34CEF00ED1761 /* RestaurantTableViewCell.swift in Sources */,
+				0242B8A421E8780E002248AC /* WalkthroughContentViewController.swift in Sources */,
+				0242B8A621E87C77002248AC /* WalkthroughPageViewController.swift in Sources */,
 				0242B8A221E82C77002248AC /* FoodPin.xcdatamodeld in Sources */,
 				0240087021E57DFA00A4EFF6 /* RestaurantDetailTableViewCell.swift in Sources */,
 				02381FA721E48CFC00900077 /* RestaurantDetailViewController.swift in Sources */,
