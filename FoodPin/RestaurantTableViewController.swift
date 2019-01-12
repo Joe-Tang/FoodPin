@@ -59,9 +59,12 @@ class RestaurantTableViewController : UITableViewController, NSFetchedResultsCon
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if let pageViewController = storyboard?.instantiateViewController(withIdentifier:
-            "WalkthroughController") as? WalkthroughPageViewController {
-            present(pageViewController, animated: true, completion: nil)
+
+        if !UserDefaults.standard.bool(forKey: "hasViewedWalkthrough") {
+            if let pageViewController = storyboard?.instantiateViewController(withIdentifier:
+                "WalkthroughController") as? WalkthroughPageViewController {
+                present(pageViewController, animated: true, completion: nil)
+            }
         }
     }
 

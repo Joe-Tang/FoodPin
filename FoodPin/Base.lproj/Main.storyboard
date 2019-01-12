@@ -465,10 +465,10 @@
             </objects>
             <point key="canvasLocation" x="2386" y="174"/>
         </scene>
-        <!--Page View Controller-->
+        <!--Walkthrough Page View Controller-->
         <scene sceneID="hSy-hQ-o9p">
             <objects>
-                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="eXK-7P-6ev" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="eXK-7P-6ev" customClass="WalkthroughPageViewController" customModule="FoodPin" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNd-yf-Row" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-92" y="915"/>
@@ -503,14 +503,29 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jPq-Nf-Scz">
+                                <rect key="frame" x="168" y="610" width="39" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajh-Vb-dub">
+                                <rect key="frame" x="316" y="617" width="39" height="30"/>
+                                <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="jzF-ti-EQu" eventType="primaryActionTriggered" id="H2G-Ye-Jhd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.078462497650000004" blue="0.13057920319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="jPq-Nf-Scz" firstAttribute="centerX" secondItem="Czx-B5-rNf" secondAttribute="centerX" id="7cL-Yr-CAk"/>
+                            <constraint firstItem="5pF-w7-fiU" firstAttribute="trailing" secondItem="ajh-Vb-dub" secondAttribute="trailing" constant="20" id="A4d-5L-u6H"/>
                             <constraint firstItem="5pF-w7-fiU" firstAttribute="bottom" secondItem="4Pc-B6-RyF" secondAttribute="bottom" constant="206" id="AKn-Xa-6IZ"/>
                             <constraint firstItem="5pF-w7-fiU" firstAttribute="trailing" secondItem="qZC-0M-KsV" secondAttribute="trailing" constant="81" id="AUu-gI-hc9"/>
                             <constraint firstItem="4Pc-B6-RyF" firstAttribute="centerX" secondItem="cbs-yy-Z61" secondAttribute="centerX" id="BaX-B2-A5L"/>
+                            <constraint firstItem="ajh-Vb-dub" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jPq-Nf-Scz" secondAttribute="trailing" constant="8" symbolic="YES" id="Ikb-vJ-tRG"/>
+                            <constraint firstItem="5pF-w7-fiU" firstAttribute="bottom" secondItem="ajh-Vb-dub" secondAttribute="bottom" constant="20" id="LPd-Fn-Slv"/>
                             <constraint firstItem="cbs-yy-Z61" firstAttribute="leading" secondItem="5pF-w7-fiU" secondAttribute="leading" constant="37" id="PCa-tx-h5b"/>
                             <constraint firstItem="cbs-yy-Z61" firstAttribute="centerX" secondItem="Czx-B5-rNf" secondAttribute="centerX" id="RJe-ql-RBR"/>
+                            <constraint firstItem="5pF-w7-fiU" firstAttribute="bottom" secondItem="jPq-Nf-Scz" secondAttribute="bottom" constant="20" id="Vpj-y6-uk3"/>
                             <constraint firstItem="qZC-0M-KsV" firstAttribute="top" secondItem="5pF-w7-fiU" secondAttribute="top" constant="52" id="c4b-xU-VV3"/>
                             <constraint firstItem="qZC-0M-KsV" firstAttribute="leading" secondItem="5pF-w7-fiU" secondAttribute="leading" constant="114" id="uYw-LI-cRf"/>
                             <constraint firstItem="cbs-yy-Z61" firstAttribute="top" secondItem="qZC-0M-KsV" secondAttribute="bottom" constant="22" id="z2h-7P-oTV"/>
@@ -521,6 +536,8 @@
                         <outlet property="contentImageView" destination="cbs-yy-Z61" id="7xQ-di-HiS"/>
                         <outlet property="contentLabel" destination="4Pc-B6-RyF" id="Eqe-qb-NNe"/>
                         <outlet property="headingLabel" destination="qZC-0M-KsV" id="rDA-sO-AZQ"/>
+                        <outlet property="nextButton" destination="ajh-Vb-dub" id="vfC-Sm-Yuk"/>
+                        <outlet property="pageControl" destination="jPq-Nf-Scz" id="2Hh-m0-QMw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zu4-Vb-roi" userLabel="First Responder" sceneMemberID="firstResponder"/>

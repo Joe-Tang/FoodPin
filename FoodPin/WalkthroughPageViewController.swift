@@ -26,16 +26,16 @@ class WalkthroughPageViewController : UIPageViewController, UIPageViewController
         }
     }
     
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return pageHeadings.count
-    }
-    
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        if let pageContentViewController = storyboard?.instantiateViewController(withIdentifier: "WalkthroughContentViewController") as? WalkthroughContentViewController {
-            return pageContentViewController.index
-        }
-        return 0
-    }
+//    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+//        return pageHeadings.count
+//    }
+//
+//    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+//        if let pageContentViewController = storyboard?.instantiateViewController(withIdentifier: "WalkthroughContentViewController") as? WalkthroughContentViewController {
+//            return pageContentViewController.index
+//        }
+//        return 0
+//    }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         var index = (viewController as! WalkthroughContentViewController).index
@@ -65,5 +65,10 @@ class WalkthroughPageViewController : UIPageViewController, UIPageViewController
         return nil
     }
     
+    func forward(_ index: Int) {
+        if let nextViewController = contentViewController(at: index + 1) {
+            setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
+        }
+    }
     
 }
