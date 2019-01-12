@@ -2,7 +2,7 @@
 //  WalkthroughPageViewController.swift
 //  FoodPin
 //
-//  Created by guan on 2019/1/11.
+//  Created by Joe on 2019/1/11.
 //  Copyright © 2019 Joe. All rights reserved.
 //
 
