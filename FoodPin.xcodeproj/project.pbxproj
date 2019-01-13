@@ -26,6 +26,8 @@
 		D816A37921EA0ED500E2AE79 /* UIColor+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D816A37821EA0ED500E2AE79 /* UIColor+UIImage.swift */; };
 		D816A38121EA21AE00E2AE79 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D816A37F21EA21AE00E2AE79 /* Discover.storyboard */; };
 		D816A38321EA256400E2AE79 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D816A38221EA256400E2AE79 /* About.storyboard */; };
+		D8D7A5AF21EAD1BB008FB0BC /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D7A5AE21EAD1BB008FB0BC /* AboutTableViewController.swift */; };
+		D8D7A5B121EAD6C3008FB0BC /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D7A5B021EAD6C3008FB0BC /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		D816A37821EA0ED500E2AE79 /* UIColor+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+UIImage.swift"; sourceTree = "<group>"; };
 		D816A38021EA21AE00E2AE79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FoodPin/Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		D816A38221EA256400E2AE79 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		D8D7A5AE21EAD1BB008FB0BC /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		D8D7A5B021EAD6C3008FB0BC /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				0242B8A321E8780E002248AC /* WalkthroughContentViewController.swift */,
 				0242B8A521E87C77002248AC /* WalkthroughPageViewController.swift */,
 				D816A37821EA0ED500E2AE79 /* UIColor+UIImage.swift */,
+				D8D7A5AE21EAD1BB008FB0BC /* AboutTableViewController.swift */,
+				D8D7A5B021EAD6C3008FB0BC /* WebViewController.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -204,7 +210,9 @@
 				0242B8A221E82C77002248AC /* FoodPin.xcdatamodeld in Sources */,
 				0240087021E57DFA00A4EFF6 /* RestaurantDetailTableViewCell.swift in Sources */,
 				02381FA721E48CFC00900077 /* RestaurantDetailViewController.swift in Sources */,
+				D8D7A5AF21EAD1BB008FB0BC /* AboutTableViewController.swift in Sources */,
 				023D2A1F21E3398A00ED1761 /* AppDelegate.swift in Sources */,
+				D8D7A5B121EAD6C3008FB0BC /* WebViewController.swift in Sources */,
 				0242B89A21E6F243002248AC /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
