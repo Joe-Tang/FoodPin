@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class RestaurantTableViewController : UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
+class RestaurantTableViewController : UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating, UIViewControllerPreviewingDelegate {
 
     var restaurants: [RestaurantMO] = []
     var fetchResultController: NSFetchedResultsController<RestaurantMO>!
@@ -32,6 +32,7 @@ class RestaurantTableViewController : UITableViewController, NSFetchedResultsCon
         searchBar.barTintColor = UIColor(red: 218.0/255.0, green: 100.0/255.0, blue: 70.0/255.0, alpha: 1.0)
 
         tableView.tableHeaderView = searchBar
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
 
         let fetchRequest: NSFetchRequest = RestaurantMO.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
@@ -51,7 +52,9 @@ class RestaurantTableViewController : UITableViewController, NSFetchedResultsCon
             print(error)
         }
 
-        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        if (traitCollection.forceTouchCapability == .available) {
+            registerForPreviewing(with: self, sourceView: view)
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -199,6 +202,29 @@ class RestaurantTableViewController : UITableViewController, NSFetchedResultsCon
             filterContent(for: searchText)
             tableView.reloadData()
         }
+    }
+
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard let indexPath = tableView.indexPathForRow(at: location) else {
+            return nil
+        }
+        guard let cell = tableView.cellForRow(at: indexPath) else {
+            return nil
+        }
+        guard let restaurantDetailViewController = storyboard?.instantiateViewController(withIdentifier: "RestaurantDetailViewController") as? RestaurantDetailViewController else {
+            return nil
+        }
+
+        let selectedRestaurant = restaurants[indexPath.row]
+        restaurantDetailViewController.restaurant = selectedRestaurant
+        restaurantDetailViewController.preferredContentSize = CGSize(width: 0.0, height: 450.0)
+        previewingContext.sourceRect = cell.frame
+
+        return restaurantDetailViewController
+    }
+
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        show(viewControllerToCommit, sender: self)
     }
 
 }

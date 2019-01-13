@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
+
     // MARK: - Core Data stack
     lazy var persistentContainer: NSPersistentContainer = {
         /*
@@ -79,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
-    
+
     func saveContext() {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -89,6 +89,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+    }
+
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        completionHandler(handleQuickAction(shortcutItem: shortcutItem))
+    }
+
+    private func handleQuickAction(shortcutItem: UIApplicationShortcutItem) -> Bool {
+        let shortcutType = shortcutItem.type
+        guard let quickAction = QuickAction(fullIndentifier: shortcutType) else {
+            return false
+        }
+        guard let tabBarController = window?.rootViewController as? UITabBarController else {
+            return false
+        }
+
+        switch quickAction {
+        case .OpenFavorites:
+            tabBarController.selectedIndex = 0
+        case .OpenDiscover:
+            tabBarController.selectedIndex = 1
+        case .NewRestaurant:
+            if let navController = tabBarController.viewControllers?[0] {
+                let restaurantTableViewController = navController.children[0]
+                restaurantTableViewController.performSegue(withIdentifier: "addRestaurant", sender: restaurantTableViewController)
+            } else {
+                return false
+            }
+        }
+        return true
+    }
+
+    enum QuickAction: String {
+        case OpenFavorites = "OpenFavorites"
+        case OpenDiscover = "OpenDiscover"
+        case NewRestaurant = "NewRestaurant"
+
+        init?(fullIndentifier: String) {
+            guard let shortcutIdentifier = fullIndentifier.components(separatedBy: ".").last else {
+                return nil
+            }
+            self.init(rawValue: shortcutIdentifier)
         }
     }
 
