@@ -482,7 +482,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personalize" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZC-0M-KsV">
-                                <rect key="frame" x="114" y="72" width="180" height="36"/>
+                                <rect key="frame" x="114" y="72" width="147.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -493,13 +493,13 @@
                                     <constraint firstAttribute="height" constant="232" id="cTz-5E-TCf"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin your favorite restaurants and create your own food guide" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pc-B6-RyF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin your favorite restaurants and create your own food guide" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="4Pc-B6-RyF">
                                 <rect key="frame" x="46.5" y="397" width="282" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="282" id="Mo5-eS-UMg"/>
                                     <constraint firstAttribute="height" constant="64" id="RVo-o8-MWY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -519,7 +519,6 @@
                             <constraint firstItem="jPq-Nf-Scz" firstAttribute="centerX" secondItem="Czx-B5-rNf" secondAttribute="centerX" id="7cL-Yr-CAk"/>
                             <constraint firstItem="5pF-w7-fiU" firstAttribute="trailing" secondItem="ajh-Vb-dub" secondAttribute="trailing" constant="20" id="A4d-5L-u6H"/>
                             <constraint firstItem="5pF-w7-fiU" firstAttribute="bottom" secondItem="4Pc-B6-RyF" secondAttribute="bottom" constant="206" id="AKn-Xa-6IZ"/>
-                            <constraint firstItem="5pF-w7-fiU" firstAttribute="trailing" secondItem="qZC-0M-KsV" secondAttribute="trailing" constant="81" id="AUu-gI-hc9"/>
                             <constraint firstItem="4Pc-B6-RyF" firstAttribute="centerX" secondItem="cbs-yy-Z61" secondAttribute="centerX" id="BaX-B2-A5L"/>
                             <constraint firstItem="ajh-Vb-dub" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jPq-Nf-Scz" secondAttribute="trailing" constant="8" symbolic="YES" id="Ikb-vJ-tRG"/>
                             <constraint firstItem="5pF-w7-fiU" firstAttribute="bottom" secondItem="ajh-Vb-dub" secondAttribute="bottom" constant="20" id="LPd-Fn-Slv"/>
@@ -527,7 +526,7 @@
                             <constraint firstItem="cbs-yy-Z61" firstAttribute="centerX" secondItem="Czx-B5-rNf" secondAttribute="centerX" id="RJe-ql-RBR"/>
                             <constraint firstItem="5pF-w7-fiU" firstAttribute="bottom" secondItem="jPq-Nf-Scz" secondAttribute="bottom" constant="20" id="Vpj-y6-uk3"/>
                             <constraint firstItem="qZC-0M-KsV" firstAttribute="top" secondItem="5pF-w7-fiU" secondAttribute="top" constant="52" id="c4b-xU-VV3"/>
-                            <constraint firstItem="qZC-0M-KsV" firstAttribute="leading" secondItem="5pF-w7-fiU" secondAttribute="leading" constant="114" id="uYw-LI-cRf"/>
+                            <constraint firstItem="qZC-0M-KsV" firstAttribute="centerX" secondItem="Czx-B5-rNf" secondAttribute="centerX" id="lnv-3X-ufs"/>
                             <constraint firstItem="cbs-yy-Z61" firstAttribute="top" secondItem="qZC-0M-KsV" secondAttribute="bottom" constant="22" id="z2h-7P-oTV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5pF-w7-fiU"/>
