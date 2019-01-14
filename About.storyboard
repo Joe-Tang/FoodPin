@@ -70,11 +70,11 @@
             </objects>
             <point key="canvasLocation" x="1445" y="-785"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--About-->
         <scene sceneID="CSl-hX-Ryw">
             <objects>
                 <navigationController id="FBp-Ra-Wcc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="YBO-tI-5Bn"/>
+                    <tabBarItem key="tabBarItem" title="About" image="about" id="YBO-tI-5Bn"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mfK-Ai-EAE">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -89,6 +89,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="about" width="23" height="22"/>
         <image name="about-logo" width="485" height="200"/>
     </resources>
 </document>
